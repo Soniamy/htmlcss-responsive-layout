@@ -129,6 +129,7 @@ main .container .row .column-tablet-66 .text .button{
     background-color: var(--header-color);
     color: white;
     padding: 5px 25px;
+    margin-bottom: 20px;
 }
 
 main .container .row .column-tablet-66 .image{
@@ -159,6 +160,67 @@ main .container .row .column-tablet-33 .paragraph{
    padding: 0 30px;
 }
 /***************************************
+            MAIN 2° SECTION
+***************************************/
+.secondary-color .container .row .card-left{
+    width: 100%;
+    color: white;
+    padding-top: 30px;
+}
+.secondary-color .container .row .card-left .image{
+    margin-bottom: 65px;
+    width: 80%;
+}
+.secondary-color .container .row .card-left img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.secondary-color .container .row .card-left .text-container{
+    padding: 0 25px;
+}
+.secondary-color .container .row .card-left .title{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.secondary-color .container .row .card-left .paragraph{
+    font-size:1em;
+}
+.secondary-color .container .row .card-right{
+    width: 100%;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+.secondary-color .container .row .card-right .image{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.secondary-color .container .row .card-right img{
+    width: 100%;
+}
+.secondary-color .container .row .card-right .text-container{
+    text-align: center;
+}
+.secondary-color .container .row .card-right .text-container .title{
+ font-size: 2em;
+ font-weight: bold;
+ margin-bottom: 20px;
+}
+.secondary-color .container .row .card-right .text-container .paragraph{
+    font-size: 1em;
+    font-style: oblique;
+    margin-bottom: 20px;
+}
+.secondary-color .container .row .card-right .text-container .button{
+    background-color: var(--main-secondary-color);
+}
+
+/***************************************
                FOOTER
 ***************************************/
 .bg-footer .footer-container{
@@ -188,6 +250,13 @@ main .container .row .column-tablet-33 .paragraph{
     }
     #main-nav-container .main-icon{
        display: none;
+    }
+    .secondary-color .container .row .card-left{
+        width: 50%;
+    }
+    .secondary-color .container .row .card-right{
+        width: 40%;
+        margin-top: 180px;
     }
     .secondary-color .container .column-benefit-desk-33{
         width: calc((100% / 3) - 20px);

@@ -1,6 +1,13 @@
 /***************************************
                 RESET
 ***************************************/
+:root{
+    --header-color:#0084FD;
+    --color-font:white;
+    --main-color:#B5DDFF;
+    --main-secondary-color:#9792E4;
+    --footer-color:#333333;
+}
 *{
     margin: 0;
     padding: 0;
@@ -12,33 +19,49 @@ html{
 *:not(ul){
     padding: 0;
 }
-:root{
-    --main-color:#0084FD;
-    --main-color-font:white;
-}
 /***************************************
                 GENERAL
 ***************************************/
 .container{
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 .row{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.column{
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.bg-main{
+    background-color:var(--main-color) ;
+}
+.bg-header{
+    background-color:var(--header-color) ;
+}
+.secondary-color .container .text h1{
+    text-align: center;
+}
+.bg-footer{
+    background-color: var( --footer-color);
 }
 /***************************************
                 HEADER
 ***************************************/
 header{
-    background-color:var(--main-color) ;
+    color: white;
 }
 #main-nav-container{
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
-    color: var(--main-color-font);
+    color: var(--color-font);
 }
 #main-nav-container nav{
     display: none;
@@ -46,23 +69,56 @@ header{
 #main-nav-container nav ul , li{
     display: inline-block;
 }
+#main-nav-container nav li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
 #main-nav-container nav .button{
     display: inline-block;
 }
 /***************************************
                 MAIN
 ***************************************/
-  .
+main > section{
+   padding: calc(20px * 2) 0;
+}
+main .secondary-color{
+    background-color: var(--main-secondary-color);
+}
+/***************************************
+               FOOTER
+***************************************/
+.bg-footer .footer-container{
+    padding: 20px 0;
+    text-align: center;
+}
+
 /***************************************
                 MEDIA QUEERY
 ***************************************/
 @media screen and (min-width:768px){
+    .column-tablet-33{
+        width: calc((100% / 3) - 20px);
+    }
+    .column-tablet-66{
+        width: calc(((100% / 3) * 2) - 20px);
+    }
+    .secondary-color .container .column-benefit-tablet-33{
+        width: calc((100% / 2) - 20px);
+    }
+
+
+}
+@media screen and (min-width:992px){
     #main-nav-container nav{
         display: block;
     }
-}
-@media screen and (min-width:992px){
     #main-nav-container .main-icon{
-        display: none;
+       display: none;
+    }
+    .secondary-color .container .column-benefit-desk-33{
+        width: calc((100% / 3) - 20px);
     }
 }
+    

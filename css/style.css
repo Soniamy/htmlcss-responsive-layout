@@ -1,0 +1,68 @@
+/***************************************
+                RESET
+***************************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+*:not(ul){
+    padding: 0;
+}
+:root{
+    --main-color:#0084FD;
+    --main-color-font:white;
+}
+/***************************************
+                GENERAL
+***************************************/
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/***************************************
+                HEADER
+***************************************/
+header{
+    background-color:var(--main-color) ;
+}
+#main-nav-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    color: var(--main-color-font);
+}
+#main-nav-container nav{
+    display: none;
+}
+#main-nav-container nav ul , li{
+    display: inline-block;
+}
+#main-nav-container nav .button{
+    display: inline-block;
+}
+/***************************************
+                MAIN
+***************************************/
+  .
+/***************************************
+                MEDIA QUEERY
+***************************************/
+@media screen and (min-width:768px){
+    #main-nav-container nav{
+        display: block;
+    }
+}
+@media screen and (min-width:992px){
+    #main-nav-container .main-icon{
+        display: none;
+    }
+}

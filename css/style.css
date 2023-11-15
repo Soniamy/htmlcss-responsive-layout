@@ -178,7 +178,6 @@ main .secondary-color{
 
     .cards .card.column-tablet-66{
         width: calc(((100% / 3) * 2) - 20px);
-        display: flex;
     }
 
     .cards .card.column-tablet-66 .text, .cards .card.column-tablet-66 .image {
@@ -189,6 +188,13 @@ main .secondary-color{
         width: calc((100% / 3) - 20px);
     }
 }
+@media screen and (min-width:992px){
+    .cards .card.column-tablet-66{
+        width: calc(((100% / 3) * 2) - 20px);
+        display: flex;
+    }
+}
+
 
 /***************************************
             MAIN 2° SECTION
@@ -368,7 +374,7 @@ main .secondary-color{
     margin-top: 5px;
     background-color: var(--main-secondary-color);
     color: white;
-    padding: 5px 25px ;
+    padding: 10px 45px ;
 }
 /***************************************
                MAIN 5°SECTION
@@ -439,14 +445,60 @@ main .secondary-color{
    
 
 }
+/***************************************
+               MAIN 6°SECTION
+***************************************/ 
+   .started .container .text{
+    text-align: center;
+    color: white;
+   }
+   .started .container .text .subtitle , .paragraph ,.copyright{
+    font-size: 0.9em;
+    line-height: 20px;
+    margin-bottom: 15px;
+   }
+   .started .container .text .title{
+    font-weight: bold;
+    font-size: 2em;
+   }
+   .started .container .text .free{
+     font-size: 3em;
+     font-weight: bold;
+     color: #FDC05F;
+     margin-bottom: 10px;
+   }
+   .started .container .text .button{
+    color: var(--main-secondary-color);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+   }
+   .started .container .text .copyright a{
+      color: white;
+   }
+   
 
 /***************************************
                FOOTER
 ***************************************/
-.bg-footer .footer-container{
+.bg-footer  .footer-container{
     padding: 20px 0;
     text-align: center;
+    color: white;
 }
+.bg-footer .footer-container .text{
+    margin-top: 20px;
+   margin-bottom: 40px;
+
+}
+.bg-footer .footer-container .link-footer{
+    margin-bottom: 30px;
+}
+
+.bg-footer .footer-container .link-footer a{
+    color: var(--main-secondary-color);
+    
+}
+
 
 /***************************************
                 MEDIA QUERY

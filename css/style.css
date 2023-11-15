@@ -10,6 +10,7 @@
     --main-font-size:1.2em;
     --main-font-mini-size:1em;
     --main-color-paragraph:#737373;
+    --main-color-work:white
 }
 *{
     margin: 0;
@@ -28,7 +29,7 @@ html{
 .container{
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 .row{
     display: flex;
@@ -52,6 +53,13 @@ html{
 .bg-header{
     background-color:var(--header-color) ;
 }
+.bg-cards{
+    background-color: var(--main-secondary-color);
+    color: white;
+}
+.bg-main-work{
+    background-color:var( --main-color-work) ;
+}
 .secondary-color .container .text h1{
     text-align: center;
 }
@@ -63,38 +71,50 @@ html{
     padding: 10px;
     border: none;
 }
-main .container .row .column-tablet-66 {
-    padding-left: 20px;
+
+@media screen and (min-width:992px) {
+    .container{
+        padding: 0 20px;
+    }
 }
+
 /***************************************
                 HEADER
 ***************************************/
 header{
     color: white;
 }
-#main-nav-container{
+
+header > .container{
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: var(--color-font);
 }
-#main-nav-container nav{
+header nav{
     display: none;
 }
-#main-nav-container nav ul , li{
+header nav ul , li{
     display: inline-block;
 }
-#main-nav-container nav li a{
+header nav li a{
     display: inline-block;
     color: white;
     text-decoration: none;
     margin-right: 10px;
 }
-#main-nav-container nav .button{
+
+header .main-icon {
+    font-size: 1.3em;
+}
+
+header nav .button{
     display: inline-block;
     background-color: white;
 }
-#main-nav-container .logo img{
+header .logo img{
     width: 50px;
 }
 
@@ -103,121 +123,321 @@ header{
                 MAIN
 ***************************************/
 main > section{
-   padding: calc(20px * 2) 0;
+   padding: 40px 0;
 }
 main .secondary-color{
     background-color: var(--main-secondary-color);
 }
-main .container .row .column-special{
-    display: flex;
+
+.cards .card {
+    color: var(--main-color-paragraph);
+    background-color:var(--main-color);
+    font-size:var(--main-font-mini-size);
+    padding: 30px;
+    text-align: center;
 }
-main .container .row .column-tablet-66 .text{
-    width: 50%;
-}
-main .container .row .column-tablet-66 .text .subtitle{
+
+
+.cards .card .title {
     color: var(--header-color);
     font-size:var(--main-font-size);
     margin-bottom: 35px;
-    margin-top: 10px;
 }
-main .container .row .column-tablet-66 .text .paragraph{
-    color: var(--main-color-paragraph);
-    font-size:var(--main-font-mini-size);
+
+.cards .card .paragraph:not(:last-child) {
     margin-bottom: 35px;
 }
-main .container .row .column-tablet-66 .text .button{
+
+.cards .card .button {
     background-color: var(--header-color);
     color: white;
-    padding: 5px 25px;
+    padding: 10px 40px;
     margin-bottom: 20px;
 }
 
-main .container .row .column-tablet-66 .image{
-    width: 50%;
-    margin-top: 36px;
+.cards .card .image {
+    margin-bottom: -30px;
 }
-main .container .row .column-tablet-66 .image img{
-    width: 60%;
-    margin-left: 60px;
-    
+
+.cards .card .image img {
+    width: 100%;
 }
-main .container .row .column-tablet-33{
-    text-align: center;
-}
-main .container .row .column-tablet-33 .icon{
+
+.cards .card .icon{
     font-size: 3.5em;
     margin-bottom: 20px;
 }
-main .container .row .column-tablet-33 .title{
-    color: var(--header-color);
-    font-size: var(--main-font-size);
-    margin-bottom: 25px;
+
+.cards .card.column.column-tablet-66 {
+    text-align: left;
 }
-main .container .row .column-tablet-33 .paragraph{
-    color: var(--main-color-paragraph);
-    font-size: var(--main-font-mini-size);
-   margin-bottom: 20px;
-   padding: 0 30px;
+
+
+
+@media screen and (min-width:768px){
+
+    .cards .card.column-tablet-66{
+        width: calc(((100% / 3) * 2) - 20px);
+        display: flex;
+    }
+
+    .cards .card.column-tablet-66 .text, .cards .card.column-tablet-66 .image {
+        width: 50%;
+    }
+  
+    .cards .card.column-tablet-33{
+        width: calc((100% / 3) - 20px);
+    }
 }
+
 /***************************************
             MAIN 2° SECTION
 ***************************************/
-.secondary-color .container .row .card-left{
+.banner-card .container .card-left{
     width: 100%;
     color: white;
     padding-top: 30px;
 }
-.secondary-color .container .row .card-left .image{
+.banner-card .container .card-left .image{
     margin-bottom: 65px;
     width: 80%;
 }
-.secondary-color .container .row .card-left img{
+.banner-card .container .card-left img{
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
-.secondary-color .container .row .card-left .text-container{
+.banner-card .container .card-left .text-container{
     padding: 0 25px;
 }
-.secondary-color .container .row .card-left .title{
+.banner-card .container .card-left .title{
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 40px;
 }
-.secondary-color .container .row .card-left .paragraph{
+.banner-card .container .card-left .paragraph{
     font-size:1em;
 }
-.secondary-color .container .row .card-right{
+.banner-card .container .card-right{
     width: 100%;
     margin-top: 40px;
     background-color: white;
     border-radius: 20px;
     padding: 20px;
 }
-.secondary-color .container .row .card-right .image{
+.banner-card .container .card-right .image{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
 }
-.secondary-color .container .row .card-right img{
+.banner-card .container .card-right img{
     width: 100%;
 }
-.secondary-color .container .row .card-right .text-container{
+.banner-card .container .card-right .text-container{
     text-align: center;
 }
-.secondary-color .container .row .card-right .text-container .title{
+.banner-card .container .card-right .text-container .title{
  font-size: 2em;
  font-weight: bold;
  margin-bottom: 20px;
 }
-.secondary-color .container .row .card-right .text-container .paragraph{
+.banner-card .container .card-right .text-container .paragraph{
     font-size: 1em;
     font-style: oblique;
     margin-bottom: 20px;
 }
-.secondary-color .container .row .card-right .text-container .button{
+.banner-card .container .card-right .text-container .button{
     background-color: var(--main-secondary-color);
+}
+
+@media screen and (min-width:992px){
+
+   .banner-card .container {
+        display: flex;
+   }
+
+   .banner-card .container .card-left{
+        width: 50%;
+    }
+
+    .banner-card .container .card-right{
+        width: 40%;
+        margin-top: 180px;
+    }
+}
+
+/***************************************
+            MAIN 3° SECTION
+***************************************/
+
+.card-list .container .text-container{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card-list .container .text-container .testimonials{
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+.card-list .container .text-container .title{
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--main-secondary-color);
+}
+.card-list .container .text-container .subtitle{
+    font-size: 1em;
+}
+
+.card-list .container .bg-cards .image{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+.card-list .container .bg-cards .image img{
+    width: 100%;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.card-list .container .bg-cards .text{
+   margin-bottom: 10px;
+   font-weight: lighter;
+   line-height: 1.3em;
+   font-size: 1.4em;
+   margin-bottom: 20px;
+  }
+  .card-list .container .bg-cards .sign{
+   font-weight: bold;
+   font-size: 1.5em;
+}
+
+.card-list .list .list-item {
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (min-width:768px){
+    .card-list .list .list-item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+    .card-list .container .bg-cards .image{
+        margin-right: 40px;
+        margin-bottom: 0;
+    }
+}
+
+/***************************************
+            MAIN 4° SECTION
+***************************************/
+  .secondary-color .container .text .title{
+    color: white;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+.secondary-color .container .row .bg-main-work.column {
+    padding: 25px 25px 25px;
+   
+}
+.secondary-color .container .row .bg-main-work.column .number{
+    color: var(--main-secondary-color);
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.secondary-color .container .row .bg-main-work.column .title-cards{
+    color: var(--main-secondary-color);
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.secondary-color .container .row .bg-main-work.column .subtitle{
+   color: var(--main-color-paragraph);
+   font-size: 1em;
+   line-height: 25px;
+   margin-bottom: 20px;
+}
+.secondary-color .container .row .bg-main-work.column .button{
+    margin-top: 5px;
+    background-color: var(--main-secondary-color);
+    color: white;
+    padding: 5px 25px ;
+}
+/***************************************
+               MAIN 5°SECTION
+***************************************/ 
+.contact .container .row .card-left-about .text .title{
+  color: var(--main-secondary-color);
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.contact .container .row .card-left-about .text {
+    padding: 30px;
+}
+.contact .container .row .card-left-about .text .description{
+  line-height: 30px;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+}
+.contact .container .row .card-right-about .find .image{
+    width: 50%;
+    margin-bottom: 25px;
+    display: flex;
+    position: relative;
+}
+.contact .container .row .card-right-about .find .image img{
+    width: 100%;
+    border-radius: 100%;
+    aspect-ratio: 2/2;
+    object-fit: cover;
+}
+.contact .container .row .card-right-about .find .image i{
+    position: absolute;
+    top: 0;
+    right: 4px;
+    font-size: 5em;
+}
+.contact .container .row .card-right-about .find .description{
+    padding: 20px;
+}
+.contact .container .row .card-right-about .find .description .paragraph{
+    color: var(--main-secondary-color);
+    font-size: 2em;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  
+}
+.contact .container .row .card-right-about .find .button{
+    background-color: var(--main-secondary-color);
+    color: white;
+    padding: 10px 40px;
+}
+.contact .container .row .card-right-about .find .button i{
+    margin-right: 5px;
+}
+@media screen and (min-width:768px){
+    .contact .container .row .card-right-about{
+        margin-top: 40px;
+    }
+    .contact .container .row .card-right-about .find .image{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contact .container .row .card-right-about .find .image i{
+        top: -8px;
+        right: -37px;  
+    }
+   
+
 }
 
 /***************************************
@@ -229,35 +449,36 @@ main .container .row .column-tablet-33 .paragraph{
 }
 
 /***************************************
-                MEDIA QUEERY
+                MEDIA QUERY
 ***************************************/
 @media screen and (min-width:768px){
-    .column-tablet-33{
-        width: calc((100% / 3) - 20px);
-    }
-    .column-tablet-66{
-        width: calc(((100% / 3) * 2) - 20px);
-    }
     .secondary-color .container .column-benefit-tablet-33{
         width: calc((100% / 2) - 20px);
+    }
+    .container .row .card-left-about{
+        width: 60%;
+    }
+    .container .row .card-right-about{
+        width: 40%;
     }
 
 
 }
 @media screen and (min-width:992px){
-    #main-nav-container nav{
+    header nav{
         display: block;
     }
-    #main-nav-container .main-icon{
+    header .main-icon{
        display: none;
     }
-    .secondary-color .container .row .card-left{
-        width: 50%;
+    
+    .container .row .card-left-about{
+        width: 60%;
     }
-    .secondary-color .container .row .card-right{
+    .container .row .card-right-about{
         width: 40%;
-        margin-top: 180px;
     }
+    
     .secondary-color .container .column-benefit-desk-33{
         width: calc((100% / 3) - 20px);
     }
